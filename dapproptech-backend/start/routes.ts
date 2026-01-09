@@ -22,4 +22,5 @@ const PropertiesController = () => import('#controllers/properties_controller')
 router.get('/properties', [PropertiesController, 'index']);
 
 const AuthController  = () => import('#controllers/auth_controller');
+router.post('/login', [AuthController, 'login']);
 router.post('/register', [AuthController, 'register']);

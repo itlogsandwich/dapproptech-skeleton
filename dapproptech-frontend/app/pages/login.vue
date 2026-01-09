@@ -7,8 +7,20 @@
 
   async function onSubmit()
   {
-    console.log('Login attempt with:', state);
-    alert('Login triggered! Check console to verify!');
+    try{  
+      const data = 
+      await $fetch('http://localhost:3333/login',{ 
+      method: 'POST',
+      body: state,
+      credentials: 'include'
+      });
+
+      console.log('Logged in: ', data);
+      navigateTo('/');
+
+    } catch(err: any){
+      alert('Login failed: ' + (err.data?.message || 'Server Error'));
+    }
   }
 </script>
 

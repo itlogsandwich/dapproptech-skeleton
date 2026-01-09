@@ -9,24 +9,27 @@
 
   async function onSubmit()
   {
-    const {data, error: fetchError } = 
-      await useFetch('http://localhost:3333/register', {
+    try{
+      const response = await $fetch('http://localhost:3333/register', {
       method: 'POST',
       body: state,
-      watch: false,
+      credentials: 'omit'
       });
 
-    if (fetchError.value){
+      console.log('User Created:', response);
+      alert('Registration Successful!');
+      navigateTo('/login');
 
-      console.error('Registration Failed:', fetchError.value.data)
-      alert('Error:' + (fetchError.value.data?.message || 'Check Console'));
-
-      return
+    } catch(err: any){
+        console.error('Raw Error:', err)
+        
+        if (err.data){
+          alert('Server Message: ' + (err.data.message || 'Validation Failed'));
+        }
+        else{
+          alert('Browser/Network Error: Request Was Blocked');
+        }
     }
-    
-    console.log('User Created:', data.value)
-    alert('Registeration Successful! Check console to verify!');
-    navigateTo('/login');
   }
 
 </script>
