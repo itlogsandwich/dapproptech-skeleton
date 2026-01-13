@@ -34,13 +34,13 @@
       </template>
 
     <UForm :state = "state" class = "space-y-4" @submit = "onSubmit">
-      <UFormField label = "Email" name = "email">
-        <UInput v-model = "state.email" placeholder = "you@example.com" icon = "i-heroicons-envelope" />
+      <UFormField label = "Email" name = "email" size = "lg" required>
+        <UInput class = "w-full" v-model = "state.email" placeholder = "you@example.com" icon = "i-heroicons-envelope" />
       </UFormField>
 
     
-      <UFormField label = "Password" name = "password">
-        <UInput v-model = "state.password" type = "password" icon = "i-heroicons-lock-closed" />
+      <UFormField label = "Password" name = "password" size = "lg" required>
+        <UInput class = "w-full" v-model = "state.password" type = "password" placeholder = "password" icon = "i-heroicons-lock-closed" />
       </UFormField>
 
       <UButton type = "submit" block color = "primary"> Login </UButton>

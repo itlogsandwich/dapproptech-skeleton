@@ -45,16 +45,16 @@
 
     <UForm :state = "state" class = "space-y-4" @submit = "onSubmit">
 
-      <UFormField label = "Full Name" name = "full_name">
-        <UInput v-model = "state.fullName" placeholder = "John Doe" icon = "i-heroicons-user" />
+      <UFormField label = "Full Name" name = "full_name" size = "lg" required>
+        <UInput  class = "w-full" v-model = "state.fullName" placeholder = "John Doe" icon = "i-heroicons-user" />
       </UFormField>
 
-      <UFormField label = "Email" name = "email">
-        <UInput v-model = "state.email" placeholder = "you@example.com" icon = "i-heroicons-envelope" />
+      <UFormField label = "Email" name = "email" size = "lg" description = "We'll never share your email with anyone else" required>
+        <UInput class = "w-full" v-model = "state.email" placeholder = "you@example.com" icon = "i-heroicons-envelope" />
       </UFormField>
 
-      <UFormField label = "Password" name = "password">
-        <UInput v-model = "state.password" type = "password" icon = "i-heroicons-lock-closed" />
+      <UFormField label = "Password" name = "password" size = "lg" required>
+        <UInput class = "w-full" v-model = "state.password" type = "password" placeholder = "passsword" icon = "i-heroicons-lock-closed"  />
       </UFormField>
 
       <UButton type = "submit" block color = "primary"> Register </UButton>

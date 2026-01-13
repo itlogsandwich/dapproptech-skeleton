@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h1> Landing Page </h1>
-    <p> Skeleton ONLY! </p>
+    <main>
+      <UContainer class = "flex h-screen items-center justify-center">
+        <h1> Landing Page </h1>
+      </UContainer>
+    </main>
   </div>
 </template>
