@@ -1,6 +1,6 @@
 import type { HttpContext } from '@adonisjs/core/http'
 import { registerValidator } from '#validators/auth'
-
+import Role from '#models/role'
 import User from '#models/user'
 
 export default class AuthController {
@@ -32,6 +32,10 @@ export default class AuthController {
       const payload = await request.validateUsing(registerValidator);
 
       const user = await User.create(payload);
+
+      const buyerRole = await Role.findByOrFail('name', 'buyer');
+
+      await user.related('roles').attach([buyerRole.id]);
 
       return response.created({
         message: 'Account created successfully!',

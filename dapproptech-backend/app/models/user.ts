@@ -3,6 +3,8 @@ import hash from '@adonisjs/core/services/hash'
 import { compose } from '@adonisjs/core/helpers'
 import { BaseModel, column, beforeSave } from '@adonisjs/lucid/orm'
 import { withAuthFinder } from '@adonisjs/auth/mixins/lucid'
+import { ManyToMany } from '@adonisjs/lucid/types/relations'
+import { Role } from '#models/role'
 
 const AuthFinder = withAuthFinder(() => hash.use('scrypt'), {
   uids: ['email'],
@@ -11,24 +13,33 @@ const AuthFinder = withAuthFinder(() => hash.use('scrypt'), {
 
 export default class User extends compose(BaseModel, AuthFinder) {
   @column({ isPrimary: true })
-  declare id: number
+  declare id: number;
 
   @column({ columnName: 'full_name'})
-  declare fullName: string | null
+  declare fullName: string | null;
 
   @column()
   declare email: string
 
   @column({ serializeAs: null })
-  declare password: string
+  declare password: string;
 
   @column({ columnName: 'nfc_public_key' })
-  declare nfcPublicKey: string | null
+  declare nfcPublicKey: string | null;
 
   @column.dateTime({ autoCreate: true })
-  declare createdAt: DateTime
+  declare createdAt: DateTime;
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
-  declare updatedAt: DateTime | null
+  declare updatedAt: DateTime | null;
+
+  @manyToMany(() => Role, {
+    localKey: 'id',
+    pivotForeignKey: 'user_id',
+    relatedKey: 'id',
+    pivotRelatedForeignKey: 'role_id'
+
+  })
+  declare roles: ManyToMany<typeof Role>
 
 }

@@ -25,3 +25,7 @@ router.get('/featured', [PropertiesController, 'featuredIndex']);
 const AuthController  = () => import('#controllers/auth_controller');
 router.post('/login', [AuthController, 'login']);
 router.post('/register', [AuthController, 'register']);
+
+
+//Check start/kernel.ts to see registered middlewares
+//no middlewares are currently being used at this time.
