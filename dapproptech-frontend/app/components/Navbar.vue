@@ -13,7 +13,7 @@
     <UContainer class = "h-20 flex items-center justify-between">
 
       <div class = "flex items-center gap-3 cursor-pointer group">
-        <UButton class = "w-15 h-15 bg-surface-dark rounded-lg flex items-center justify-center shadow-lg group-hover: border-accent/50 transition-colors"
+        <UButton class = "flex w-15 h-15 bg-surface-dark rounded-lg items-center justify-center shadow-lg group-hover: border-accent/50 transition-colors"
           to="/"
           color ="neutral"
           variant = "link"

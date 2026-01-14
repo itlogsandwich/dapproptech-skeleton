@@ -1,10 +1,10 @@
 import { DateTime } from 'luxon'
 import hash from '@adonisjs/core/services/hash'
 import { compose } from '@adonisjs/core/helpers'
-import { BaseModel, column, beforeSave } from '@adonisjs/lucid/orm'
+import { BaseModel, column, beforeSave, manyToMany } from '@adonisjs/lucid/orm'
 import { withAuthFinder } from '@adonisjs/auth/mixins/lucid'
-import { ManyToMany } from '@adonisjs/lucid/types/relations'
-import { Role } from '#models/role'
+import type { ManyToMany } from '@adonisjs/lucid/types/relations'
+import Role from '#models/role'
 
 const AuthFinder = withAuthFinder(() => hash.use('scrypt'), {
   uids: ['email'],
@@ -34,6 +34,7 @@ export default class User extends compose(BaseModel, AuthFinder) {
   declare updatedAt: DateTime | null;
 
   @manyToMany(() => Role, {
+    pivotTable: 'role_users',
     localKey: 'id',
     pivotForeignKey: 'user_id',
     relatedKey: 'id',
