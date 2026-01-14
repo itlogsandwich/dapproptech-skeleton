@@ -13,7 +13,7 @@
     <UContainer class = "h-20 flex items-center justify-between">
 
       <div class = "flex items-center gap-3 cursor-pointer group">
-        <UButton class = "w-15 h-15 bg-surface-light rounded-lg flex items-center justify-center shadow-lg group-hover: border-accent/50 transition-colors"
+        <UButton class = "w-15 h-15 bg-surface-dark rounded-lg flex items-center justify-center shadow-lg group-hover: border-accent/50 transition-colors"
           to="/"
           color ="neutral"
           variant = "link"
@@ -39,10 +39,10 @@
       <div class = "flex items-center gap-3">
         <UButton
             to="/register" 
-            color="primary" 
+            color="" 
             variant="solid" 
             size="md"
-            class="px-6 font-bold text-white shadow-lg shadow-accent/20"
+            class="bg-accent-500 px-6 font-bold text-white transition-all hover:bg-accent-600 active:scale-95 shadow-lg shadow-accent/20"
         >
           Sign Up
         </UButton>

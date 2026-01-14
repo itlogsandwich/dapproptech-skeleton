@@ -24,8 +24,9 @@
                 
                 <UButton 
                   to = "/register"
+                  color = ""
                   size="xl" 
-                  class="mt-8 px-10 py-4 font-bold rounded-xl shadow-lg shadow-accent/20"
+                  class="bg-accent-500 rounded-xl mt-8 px-10 py-4 font-bold text-white transition-all hover:bg-accent-600 active:scale-95 shadow-lg shadow-accent/20"
                 >
                   Get Started
                 </UButton>
@@ -53,7 +54,7 @@
                   <UInput 
                     v-model="search" 
                     variant="none" 
-                    placeholder="Search by address, city, neighborhood..." 
+                    placeholder="Search by address, city, neighborhood, or ZIP" 
                     :ui="{ 
                       base: 'bg-transparent border-none text-main placeholder-muted w-full focus:ring-0',
                     }"
@@ -63,9 +64,9 @@
 
                 <div class="pl-4">
                   <UButton
-                    color="primary"
+                    color = ""
                     size="xl"
-                    class="rounded-xl px-8 font-bold transition-transform active:scale-95"
+                    class="bg-accent-500 rounded-xl px-8 font-bold text-white transition-all hover:bg-accent-600 active:scale-95 shadow-lg shadow-accent/20"
                   >
                     <template #leading>
                       <UIcon name="i-heroicons-magnifying-glass" class="size-5" />
@@ -82,7 +83,7 @@
       <br>
 
         <section id = "featured-properties">
-            <div class = "bg-surface-light flex flex-col items-center justify-center mb-8">
+            <div class =  "h-25 bg-surface-dark flex flex-col items-center justify-center mb-8">
               <h1 class = "text-3xl font-bold text-gray-900 dark:text-white"> Featured Properties </h1>
               <p v-if = "pending" class = "text-primary-500 italic"> Connecting to Blockchain Ledger...</p>
               <p v-else-if = "error" cklass = "text-red-500"> Error: Failed to connect to backend. Check Adonis </p>

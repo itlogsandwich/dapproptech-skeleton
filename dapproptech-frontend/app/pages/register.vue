@@ -57,7 +57,14 @@
         <UInput class = "w-full" v-model = "state.password" type = "password" placeholder = "passsword" icon = "i-heroicons-lock-closed"  />
       </UFormField>
 
-      <UButton type = "submit" block color = "primary"> Register </UButton>
+      <UButton 
+        type = "submit" 
+        block 
+        color = ""
+        class="bg-accent-500 font-bold text-white transition-all hover:bg-accent-600 active:scale-95 shadow-lg shadow-accent/20"
+      > 
+      Register 
+      </UButton>
     </UForm>
     
       <template #footer>

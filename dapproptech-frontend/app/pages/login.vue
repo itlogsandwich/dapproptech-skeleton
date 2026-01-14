@@ -43,7 +43,13 @@
         <UInput class = "w-full" v-model = "state.password" type = "password" placeholder = "password" icon = "i-heroicons-lock-closed" />
       </UFormField>
 
-      <UButton type = "submit" block color = "primary"> Login </UButton>
+      <UButton 
+        type = "submit" 
+        block 
+        color = "" 
+        class="bg-accent-500 font-bold text-white transition-all hover:bg-accent-600 active:scale-95 shadow-lg shadow-accent/20"
+        > 
+      Login </UButton>
     </UForm>
     
       <template #footer>

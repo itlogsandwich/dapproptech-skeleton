@@ -1,8 +1,12 @@
 export default defineAppConfig(
 {
-  ui:
-  {
+  ui:{
     primary: 'accent',
     gray: 'slate',
+    button: {
+      default:{
+        color: 'accent'
+      }
+    }
   } 
 })
