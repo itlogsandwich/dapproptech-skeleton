@@ -13,12 +13,12 @@
     <UContainer class = "h-20 flex items-center justify-between">
 
       <div class = "flex items-center gap-3 cursor-pointer group">
-        <UButton class = "w-10 h-10 bg-surface-light rounded-lg flex items-center justify-center border border-white/10 shadow-lg group-hover: border-accent/50 transition-colors"
+        <UButton class = "w-15 h-15 bg-surface-light rounded-lg flex items-center justify-center shadow-lg group-hover: border-accent/50 transition-colors"
           to="/"
           color ="neutral"
           variant = "link"
         >
-          <span class = "text-xl"> 🛡️</span>
+          <span class = "xl"> <NuxtImg src = "DAPProptech-logo-small.png"/> </span>
         </UButton>
         <span class = "font-bold text-xl tracking-tight text-main"> PropTech</span>
       </div>
