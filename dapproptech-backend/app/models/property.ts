@@ -20,6 +20,9 @@ export default class Property extends BaseModel {
   @column()
   declare sqm: number;
 
+  @column({ columnName: 'is_featured' })
+  declare isFeatured: boolean;
+
   @column({ columnName: 'image_url' })
   declare imageUrl: string;
 

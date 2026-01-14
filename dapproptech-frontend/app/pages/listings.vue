@@ -13,7 +13,7 @@
       <p v-else class = "text-gray-500 mt-2"> Blockchain-secured Properties! </p>
     </div>
 
-    <div class = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
       <UCard v-for ="property in properties" :key = "property.id" class = "hover:ring-2 hover:ring-primary-500 transition-all cursor-pointer">
         <template #header>

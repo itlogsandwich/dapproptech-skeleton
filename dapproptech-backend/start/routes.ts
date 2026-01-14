@@ -20,6 +20,7 @@ router.get('/', async () => {
 
 const PropertiesController = () => import('#controllers/properties_controller')
 router.get('/properties', [PropertiesController, 'index']);
+router.get('/featured', [PropertiesController, 'featuredIndex']);
 
 const AuthController  = () => import('#controllers/auth_controller');
 router.post('/login', [AuthController, 'login']);

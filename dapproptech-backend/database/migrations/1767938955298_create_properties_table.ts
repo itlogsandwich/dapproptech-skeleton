@@ -11,6 +11,7 @@ export default class extends BaseSchema {
       table.string('price').notNullable();
       table.string('type').notNullable();
       table.integer('sqm').notNullable();
+      table.boolean('is_featured').notNullable().defaultTo(false);
       table.string('image_url').notNullable();
 
       table.timestamp('created_at', { useTz: true });
