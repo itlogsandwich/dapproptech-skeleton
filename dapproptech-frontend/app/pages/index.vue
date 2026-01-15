@@ -23,7 +23,7 @@
                 </p>
                 
                 <UButton 
-                  to = "/register"
+                  to = "/listings"
                   color = ""
                   size="xl" 
                   class="bg-accent-500 rounded-xl mt-8 px-10 py-4 font-bold text-white transition-all hover:bg-accent-600 active:scale-95 shadow-lg shadow-accent/20"

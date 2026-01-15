@@ -3,7 +3,7 @@
   { label: 'Home', to: '/' },
   { label: 'Agents', to: '/agents' },
   { label: 'Blog', to: '/blog' },
-  { label: 'About us', to: '/about' },
+  { label: 'About Us', to: '/about' },
   { label: 'Contact', to: '/contact' }
   ]
 </script>

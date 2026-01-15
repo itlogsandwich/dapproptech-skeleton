@@ -37,8 +37,9 @@
 <template>
   <UContainer class = "flex h-screen items-center justify-center">
 
-    <UCard class = "w-full max-w-md">
+    <UCard class = "w-full bg-surface-dark max-w-md">
       <template #header>
+       <NuxtImg class = "w-15 h-15" src = "DAPProptech-logo-small.png"/>
         <h2 class = "text-xl font-bold"> Sign In </h2>
         <p class = "text-sm text-gray-500"> A safer and secure environment for all your estate needs </p>
       </template>
