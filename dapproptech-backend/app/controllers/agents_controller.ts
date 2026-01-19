@@ -15,4 +15,18 @@ export default class AgentsController {
 
     return response.ok(agents)
   }
+  public async show({ params, response }: HttpContext)
+  {
+    try
+    {
+      const agent = await User.query()
+          .where('id', params.id).firstOrFail();
+
+      return response.ok(agent)
+    }
+    catch (error)
+    {
+      return response.notFound({ message: 'Agent not Found'})
+    }
+  }
 }

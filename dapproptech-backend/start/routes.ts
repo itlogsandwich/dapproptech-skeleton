@@ -29,7 +29,7 @@ router.post('/signup', [AuthController, 'register']);
 
 const AgentController = () => import('#controllers/agents_controller');
 router.get('/agents', [AgentController, 'index']);
-
+router.get('/agents/:id', [AgentController, 'show']);
 
 //Check start/kernel.ts to see registered middlewares
 //no middlewares are currently being used at this time.
