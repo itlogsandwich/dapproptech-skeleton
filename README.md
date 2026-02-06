@@ -2,6 +2,7 @@
 ## The final finished product has 4 core features. NFC, Blockchain, Digital Signatures, and AI Contract Analysis.
 
 I made this by myself to understand Nuxt Vue, AdonisJS and Typescript. Practicing here significantly improved my understanding for our actual system.
-The final and finished system is private and is not open for others to see. 
+
+The main and final code for the system can be seen here <a href = "https://github.com/DAPPropTech"> DAPProptech </a>
 
 This is no longer being updated and will only serve as a reminder of my initial learnings of Typescript and its frameworks.
